@@ -1,0 +1,12 @@
+
+<%@song = @artist[0].songs[0]%>
+<%@genre = @artist[0].genres[0]%>
+<a href='/songs/<%=@song.slug%>'>
+
+  <%=@artist[0].songs[0].name%>
+</a>
+
+<a href='/genres/<%=@genre.slug%>'>
+
+  <%=@artist[0].genres[0].name%>
+  </a>
