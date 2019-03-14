@@ -1,0 +1,8 @@
+<% require 'pry'%>
+<h1> List of all the HOT genres out there FIRE!!! </h1>
+
+<ul>
+  <% @genres.each do |genre| %>
+  <li> <a href="/genres/<%=genre.slug%>"> <%= genre.name%> </a></li>
+  <% end %>
+</ul>

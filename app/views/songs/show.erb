@@ -1,0 +1,8 @@
+<h1> Here is more info about this HOT hit!</h1>
+
+<ul>
+  <li> Artist: <a href="/artists/<%=@song.artist.slug%>"><%=@song.artist.name%></a></li><br>
+  <% @song.genres.each do |genre|%>
+  <li> genre: <a href="/genres/<%=genre.slug%>"><%= genre.name%></a></li><br>
+  <% end %>
+</ul>
