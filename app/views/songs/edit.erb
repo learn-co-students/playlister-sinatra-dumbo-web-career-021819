@@ -1,0 +1,17 @@
+<h1>Please edit your HOT existing single below!</h1>
+
+<form action="/songs/<%=@song.slug%>" method="post">
+  <type="hidden" name="_method" value="patch">
+  <label>Song Name:</label>
+  <input type="text" id="name" name="song[name]" value="<%= @song.name%>"/><br>
+
+  <% Genre.all.each do |genre| %>
+  <label><%= genre.name%></label>
+  <input id="<%= genre.name %>" type="checkbox"
+  name="genres[]" value="<%= genre.id %>"<%='checked' if @song.genres.include?(genre) %>>
+<% end %>
+
+<label>Artist Name:</label>
+<input type="text" id="artist_name" name="Artist Name" value="<%= @song.artist.name%>"/><br>
+<input type="submit" value="Save">
+</form>

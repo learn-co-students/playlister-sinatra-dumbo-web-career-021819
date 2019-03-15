@@ -1,13 +1,16 @@
 <h1> Please add your HOT new single below!</h1>
 
 <form action="/songs" method="post">
-  <label for="song_genresname">Song Name:</label>
-  <input id="song_name" name="song_name" type="text"/><br>
+  <label>Song Name:</label>
+  <input type="text" name="Name"/><br>
+
+  <label for="genres">Genres:</label>
   <% Genre.all.each do |genre| %>
   <input id="<%= genre.name %>" type="checkbox"
   name="genres[]" value="<%= genre.id %>">
 <% end %>
-<label for="artist_name">Artist Name:</label>
-<input id="artist_name" name="artist_name" type="text"/><br>
-<input type="submit" value="submit">
+
+<label>Artist Name:</label>
+<input type="text" name="Artist Name"/><br>
+<input type="submit" value="Create">
 </form>
